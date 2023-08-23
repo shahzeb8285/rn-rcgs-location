@@ -8,12 +8,37 @@ ramaera location library
 npm install react-native-ramaera-location
 ```
 
+## Setup
+declare service in manifest.xml file 
+
+```xml
+ <service android:name="com.ramaeralocation.services.RamaeraLocationService"
+        android:enabled="true"
+        android:exported="true"/>
+// ...
+
+
+
 ## Usage
 
-```js
-import { multiply } from 'react-native-ramaera-location';
 
-// ...
+```js
+import { startLocation, stopLocation } from 'react-native-ramaera-location';
+import {  DeviceEventEmitter } from 'react-native';
+
+
+  const startListeningLocation = () => {
+    DeviceEventEmitter.addListener('location',async  function (e: Event) {
+      //@ts-ignore
+      await sendLocation(e.latitude,e.longitude)
+
+    });
+  }
+
+
+
+
+//
 
 const result = await multiply(3, 7);
 ```

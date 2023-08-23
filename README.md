@@ -15,7 +15,7 @@ declare service in manifest.xml file
  <service android:name="com.ramaeralocation.services.RamaeraLocationService"
         android:enabled="true"
         android:exported="true"/>
-// ...
+```
 
 
 
@@ -36,16 +36,8 @@ import {  DeviceEventEmitter } from 'react-native';
   }
 
 
-
-
-//
-
-const result = await multiply(3, 7);
 ```
 
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## License
 
